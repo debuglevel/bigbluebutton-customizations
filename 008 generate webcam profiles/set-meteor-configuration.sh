@@ -5,6 +5,10 @@ echo "Setting webcam settings..."
 
 HTML5_CONFIG="test.yml"
 
+# BBB 2.2 ships yq in version 3, as "yq" in PATH. I suggest just adding a yq4 binary to the PATH.
+# Install it via: wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 -O /usr/bin/yq4 && chmod +x /usr/bin/yq4
+YQ4="yq4"
+
 # WebRTC allows a minimum of 30kbit/s (says BBB docs)
 BITRATE_MIN=30
 BITRATE_MAX=200
@@ -31,10 +35,10 @@ for bitrate in $(seq $BITRATE_MIN $BITRATE_STEP $BITRATE_MAX); do
     # if not exists -> no output
     if [[ "$OUTPUT" == "false" ]]; then
       echo "Profile id=$id exists, updating..."
-      yq4 -i eval "(.public.kurento.cameraProfiles.[] | select(.id == \"$id\")) = $dict" $HTML5_CONFIG
+      $YQ4 -i eval "(.public.kurento.cameraProfiles.[] | select(.id == \"$id\")) = $dict" $HTML5_CONFIG
     else
       echo "Profile id=$id does not exist, adding..."
-      yq4 -i eval ".public.kurento.cameraProfiles += $dict" $HTML5_CONFIG
+      $YQ4 -i eval ".public.kurento.cameraProfiles += $dict" $HTML5_CONFIG
     fi
   done
 done
