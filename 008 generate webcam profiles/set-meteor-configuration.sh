@@ -2,8 +2,10 @@
 echo "Setting webcam settings..."
 
 # TODO: apply-lib.sh must be sourced or something to get $HTML5_CONFIG
+source /etc/bigbluebutton/bbb-conf/apply-lib.sh
 
-HTML5_CONFIG="test.yml"
+#HTML5_CONFIG="test.yml"
+echo $HTML5_CONFIG
 
 # BBB 2.2 ships yq in version 3, as "yq" in PATH. I suggest just adding a yq4 binary to the PATH.
 # Install it via: wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 -O /usr/bin/yq4 && chmod +x /usr/bin/yq4
