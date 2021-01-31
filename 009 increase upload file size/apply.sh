@@ -1,4 +1,7 @@
 # https://docs.bigbluebutton.org/2.2/customize.html#increase-the-file-size-for-an-uploaded-presentation
+echo "UNTESTED"
+return
+
 echo "Setting maximum upload size..."
 
 sed -i -e 's/client_max_body_size *30m;/client_max_body_size       200m;/g' /etc/bigbluebutton/nginx/web.nginx
