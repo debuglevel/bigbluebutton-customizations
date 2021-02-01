@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "- Disabling mute sounds..."
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 FREESWITCH_CONFIG=/opt/freeswitch/etc/freeswitch/autoload_configs/conference.conf.xml
 

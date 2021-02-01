@@ -22,4 +22,16 @@ Disable "you are now (un)muted" sounds.
 Modify title
 
 ## 007 session feedback
-**CAUTION: not tested and just borrowed from the official docs**
+Enable the client feedback feature
+
+## 008 generate webcam profiles
+Generates some webcam profile for testing purposes
+
+## 009 increase upload file size
+Increases the maximum upload file size to 200MB
+
+## 010 increase page limit
+Increases the page limit to 500
+
+## 011 multiple kurento
+Enable multiple Kurento servers (for webcam, desktop and listen only)

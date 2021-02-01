@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "- Setting german welcome message"
 # TODO: not yet tested if this works that way (duplicate key)
 cat <<EOT >> /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
