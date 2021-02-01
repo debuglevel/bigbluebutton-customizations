@@ -22,7 +22,7 @@ Disable "you are now (un)muted" sounds.
 Modify title
 
 ## 007 session feedback
-Enable the client feedback feature
+Enable the client feedback feature. Also enables sending client logs to the server.
 
 ## 008 generate webcam profiles
 Generates some webcam profile for testing purposes
