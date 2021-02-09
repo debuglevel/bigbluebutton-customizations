@@ -51,5 +51,8 @@ fi
 if [ "$RUN_011" = true ] ; then
   $BASEDIR/011*/apply.sh
 fi
+if [ "$RUN_012" = true ] ; then
+  $BASEDIR/012*/apply.sh
+fi
 
 
